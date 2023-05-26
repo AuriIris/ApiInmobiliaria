@@ -1,0 +1,29 @@
+namespace api.Models;
+
+    public class ContratoView
+    {
+        public int Id { get; set; }
+        public DateTime? FecDesde { get; set; }
+        public DateTime? FecHasta { get; set; }
+        public int? IdInquilino { get; set; }
+        public Inquilino? Inquilino1 { get; set; }
+        public int? IdInmueble { get; set; }
+        public Inmueble? Inmueble1 { get; set; }
+
+        public ContratoView()
+        {
+        }
+
+        public ContratoView(Contrato contrato)
+        {
+            Id = contrato.Id;
+            FecDesde = contrato.FecDesde;
+            FecHasta = contrato.FecHasta;
+            IdInquilino = contrato.IdInquilino;
+            Inquilino1 = contrato.Inquilino1;
+            IdInmueble = contrato.IdInmueble;
+            Inmueble1 =contrato.Inmueble1;
+        }
+    }
+
+

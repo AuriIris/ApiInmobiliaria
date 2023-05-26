@@ -1,0 +1,36 @@
+namespace api.Models
+{
+    public class InmuebleView
+    {
+        public int Id { get; set; }
+        public int Tipo { get; set; }
+        public string? Direccion { get; set; }
+        public int Uso { get; set; }
+        public int CantHamb { get; set; }
+        public string? Latitud { get; set; }
+        public string? Longitud { get; set; }
+        public double Precio { get; set; }
+        public int Estado { get; set; }
+        public int IdPropietario { get; set; }
+        public Propietario? Duenio { get; set; }
+
+        public InmuebleView()
+        {
+        }
+
+        public InmuebleView(Inmueble inmueble)
+        {
+            Id = inmueble.Id;
+            Tipo = inmueble.Tipo;
+            Direccion = inmueble.Direccion;
+            Uso = inmueble.Uso;
+            CantHamb = inmueble.CantHamb;
+            Latitud = inmueble.Latitud;
+            Longitud = inmueble.Longitud;
+            Precio = inmueble.Precio;
+            Estado = inmueble.Estado;
+            IdPropietario = inmueble.IdPropietario;
+            Duenio = inmueble.Duenio;
+        }
+    }
+}

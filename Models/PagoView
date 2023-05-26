@@ -1,0 +1,26 @@
+
+
+namespace api.Models
+{
+    public class PagoView
+    {
+        public int Id { get; set; }
+        public double? Monto { get; set; }
+        public DateTime? Fecha { get; set; }
+        public int? IdContrato { get; set; }
+        public Contrato? Contrato1 { get; set; }
+
+        public PagoView()
+        {
+        }
+
+        public PagoView(Pago pago)
+        {
+            Id = pago.Id;
+            Monto = pago.Monto;
+            Fecha = pago.Fecha;
+            IdContrato = pago.IdContrato;
+            Contrato1 = pago.Contrato1;
+        }
+    }
+}
